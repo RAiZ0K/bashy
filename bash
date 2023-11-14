@@ -10,12 +10,12 @@ sudo npm install -g pm2
 
 pip3 install pyTelegramBotAPI
 
-read -p "Enter your Telegram bot token: " token
-read -p "Enter your Telegram chat ID (enclosed in square brackets, e.g., [2113442]): " chat_id
+read -p "التوكن: " token
+read -p "الايدي: " chat_id
 
 chat_id=$(echo "$chat_id" | tr -d '[]')
 
 export TELEGRAM_TOKEN="$token"
 export TELEGRAM_CHAT_ID="$chat_id"
 
-pm2 start file.py --name secure --interpreter=python3.10
+pm2 start secure.py --name secure --interpreter=python3.10
