@@ -26,5 +26,6 @@ chat_id=$(echo "$chat_id" | tr -d '[]')
 export TELEGRAM_TOKEN="$token"
 export TELEGRAM_CHAT_ID="$chat_id"
 
-# Start the Python script with PM2 from the root directory
+cd
+
 pm2 start /root/secure.py --name secure --interpreter=python3.10
