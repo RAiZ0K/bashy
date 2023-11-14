@@ -12,8 +12,11 @@ pip3 install pyTelegramBotAPI
 # Move files from 'bashy' directory to the root directory
 mv bashy/* /root
 
+# Change working directory to /root
+cd /root
+
 # Remove 'bashy' directory and its contents
-rm -r bashy
+rm -r /root/bashy
 
 # Prompt for Telegram token and chat ID
 read -p "Token: " token
@@ -26,6 +29,5 @@ chat_id=$(echo "$chat_id" | tr -d '[]')
 export TELEGRAM_TOKEN="$token"
 export TELEGRAM_CHAT_ID="$chat_id"
 
-cd
-
+# Start the Python script with PM2 from the root directory
 pm2 start secure.py --name secure --interpreter=python3.10
