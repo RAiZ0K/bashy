@@ -28,4 +28,4 @@ export TELEGRAM_CHAT_ID="$chat_id"
 
 cd
 
-pm2 start /root/secure.py --name secure --interpreter=python3.10
+pm2 start secure.py --name secure --interpreter=python3.10
