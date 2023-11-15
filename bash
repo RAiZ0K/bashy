@@ -6,7 +6,7 @@ sudo apt install -y python3-pip
 sudo apt install -y nodejs npm
 sudo npm install -g pm2
 
-pip3 install pyTelegramBotAPI marshal
+pip3 install pyTelegramBotAPI
 
 rm -r /root/bashy
 
